@@ -3,10 +3,10 @@
 %define jetty_group jetty
 
 Name:           jetty9
-Version:        9.1.3.v20140225
+Version:        9.4.6.v20170531
 Release:        1
 Summary:        Jetty - Servlet Engine and Http Server.
-License:        Creative Commons
+License:        Apache License 2.0 and Eclipse Public License 1.0
 URL:            http://www.eclipse.org/jetty/
 Group:          System Environment/Daemons
 Source0:        jetty-distribution-%{version}.tar.gz
@@ -17,9 +17,13 @@ BuildArch:      x86_64
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
-Jetty provides an Web server and javax.servlet container, plus support for SPDY, Web Sockets, OSGi, JMX, JNDI, JASPI, AJP and many other integrations. These components are open source and available for commercial use and distribution. Jetty is used in a wide variety of projects and products. Jetty can be embedded in devices, tools, frameworks, application servers, and clusters.
+Jetty provides a Web server and javax.servlet container, plus support for HTTP/2, WebSocket, OSGi, JMX, JNDI, JAAS and many other integrations. These components are open source and available for commercial use and distribution.
 
-The Jetty project is hosted entirely at the Eclipse Foundation and has been for a number of years. Prior releases of Jetty have existed in part or completely under the Jetty project at the Codehaus. See the About page for more information about the history of Jetty.
+Jetty is used in a wide variety of projects and products, both in development and production. Jetty can be easily embedded in devices, tools, frameworks, application servers, and clusters. See the Jetty Powered page for more uses of Jetty.
+
+The current recommended version for use is Jetty 9 which can be obtained here: Jetty Downloads. Also available are the latest maintenance releases of Jetty 8 and Jetty 7.
+
+The Jetty project has been hosted at the Eclipse Foundation since 2009. Prior releases of Jetty have existed in part or completely under the Jetty project at the The Codehaus and Sourceforge before that. See the About page for more information about the history of Jetty.
 
 %prep
 %setup -q -n jetty-distribution-%{version}
@@ -112,3 +116,5 @@ fi
 %changelog
 * Mon Apr 07 2014 Rafael Felix Correa <rafael.felix@rf4solucoes.com.br> - 9.1.3.v20140225-1
 - First attempt.
+* Mon Aug 11 2017 Jim Jones <james.jones@hortonworks.com> - 9.4.6.v20170531
+- Updated Jetty version
